@@ -1,0 +1,24 @@
+Source: debdoc
+Section: utils
+Priority: optional
+Maintainer: Md Sulaiman <infosulaimanbd@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-golang,
+ golang-any,
+Standards-Version: 4.4.0
+Homepage: https://github.com/boss-net/debdoc
+XS-Go-Import-Path: github.com/boss-net/debdoc
+Testsuite: autopkgtest-pkg-go
+
+Package: debdoc
+Architecture: any
+Built-Using: ${misc:Built-Using}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ docker.io | docker-ce | docker-ee
+Description: Debian packaging with Docker
+ Create Debian packages in Docker containers easily.
